@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'address' => 'Address',
+    'nit' => 'Nit',
+    'back' => 'Back',
+    'save' => 'Save',
+    'actions' => 'Actions',
+    'cancel' => 'Cancel',
+    'delete' => 'Delete',
+    'show' => 'Show',
+    'edit' => 'Edit',
+    'name' => 'Name',
+    'create' => 'Create',
+    'update' => 'Update',
+    'customers' => 'Customers',
+    'new_customer' => 'New Customer',
+    'edit_customer' => 'Edit Customer',
+    'delete_customer' => 'Delete Customer',
+    'create_customer' => 'Create Customer',
+    'customer_details' => 'Customer Details',
+];
