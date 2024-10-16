@@ -30,3 +30,4 @@ Route::resource('promociones', PromocionController::class)->only(['index']);
 Route::post('promociones/enviar', [PromocionController::class, 'enviarPromociones'])->name('promociones.enviar');
 
 require __DIR__.'/auth.php';
+
