@@ -10,15 +10,17 @@ class Producto extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'stock',
-        'fecha_vencimiento',
-        'id_categoria',
+        'nombre', 'precio', 'en_promocion', 'precio_promocional', 'id_categoria',
     ];
 
     // Relación con la categoría (opcional)
     public function categoria()
     {
         return $this->belongsTo(Categoria::class, 'id_categoria');
+    }
+
+    public function promocion()
+    {
+        return $this->hasMany(Promocion::class);
     }
 }

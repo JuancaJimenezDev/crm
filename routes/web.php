@@ -4,17 +4,8 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PromocionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,10 +21,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-use App\Http\Controllers\ClienteController;
 
 Route::resource('clientes', ClienteController::class);
 Route::resource('categorias', CategoriaController::class);
 Route::resource('productos', ProductoController::class);
+
+Route::resource('promociones', PromocionController::class)->only(['index']);
+Route::post('promociones/enviar', [PromocionController::class, 'enviarPromociones'])->name('promociones.enviar');
 
 require __DIR__.'/auth.php';

@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
-            $table->id(); // Campo 'id' auto incremental
-            $table->string('nombre'); // Campo 'nombre'
-            $table->integer('stock'); // Campo 'stock'
-            $table->date('fecha_vencimiento')->nullable(); // Campo 'fecha de vencimiento'
+            $table->id();
+            $table->string('nombre');
+            $table->decimal('precio', 10, 2);
+            $table->boolean('en_promocion')->default(false);
+            $table->decimal('precio_promocional', 10, 2)->nullable();
             $table->foreignId('id_categoria')->constrained('categorias')->onDelete('cascade'); // Relación con la tabla 'categorias'
             $table->timestamps(); // Campos de timestamps (created_at y updated_at)
         });
