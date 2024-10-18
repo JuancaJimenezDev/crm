@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('phone_number');
             $table->string('address');
+            $table->string('email');
             $table->string('nit');
             $table->timestamps();
         });

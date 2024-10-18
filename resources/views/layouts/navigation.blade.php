@@ -16,16 +16,20 @@
                         {{ __('dashboard.dashboard') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
+                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index') || request()->routeIs('clientes.create') || request()->routeIs('clientes.edit') || request()->routeIs('clientes.show')">
                         {{ __('dashboard.customer') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index')">
+                    <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index') || request()->routeIs('categorias.create') || request()->routeIs('categorias.edit') || request()->routeIs('categorias.show')">
                         {{ __('dashboard.categories') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+                    <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index') || request()->routeIs('productos.create') || request()->routeIs('productos.edit') || request()->routeIs('productos.show')">
                         {{ __('dashboard.products') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('promociones.index')" :active="request()->routeIs('promociones.index')">
+                        {{ __('dashboard.promotions') }}
                     </x-nav-link>
 
                 </div>
@@ -84,16 +88,21 @@
                 {{ __('dashboard.dashboard') }}
             </x-nav-link>
 
-            <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
+            <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index') || request()->routeIs('clientes.create') || request()->routeIs('clientes.edit') || request()->routeIs('clientes.show')">
                 {{ __('dashboard.customer') }}
             </x-nav-link>
 
-            <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index')">
+            <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index') || request()->routeIs('categorias.create') || request()->routeIs('categorias.edit') || request()->routeIs('categorias.show')">
                 {{ __('dashboard.categories') }}
             </x-nav-link>
 
-            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index') || request()->routeIs('productos.create') || request()->routeIs('productos.edit') || request()->routeIs('productos.show')">
                 {{ __('dashboard.products') }}
+            </x-nav-link>
+
+
+            <x-nav-link :href="route('promociones.index')" :active="request()->routeIs('promociones.index')">
+                {{ __('dashboard.promotions') }}
             </x-nav-link>
 
 

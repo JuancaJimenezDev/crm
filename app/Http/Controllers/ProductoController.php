@@ -24,10 +24,12 @@ class ProductoController extends Controller
     {
         $request->validate([
             'nombre' => 'required|string|max:255',
-            'stock' => 'required|integer|min:0',
-            'fecha_vencimiento' => 'nullable|date',
+            'precio' => 'required|numeric|min:0', // Cambiado a numeric para decimal
+            'en_promocion' => 'nullable|boolean',
+            'precio_promocional' => 'nullable|numeric|min:0', // Cambiado a numeric para decimal
             'id_categoria' => 'required|exists:categorias,id', // Validar que la categoría exista
         ]);
+
 
         Producto::create($request->all()); // Crear un nuevo producto
 
@@ -52,8 +54,9 @@ class ProductoController extends Controller
     {
         $request->validate([
             'nombre' => 'required|string|max:255',
-            'stock' => 'required|integer|min:0',
-            'fecha_vencimiento' => 'required|date',
+            'precio' => 'required|numeric|min:0', // Cambiado a numeric para decimal
+            'en_promocion' => 'nullable|boolean',
+            'precio_promocional' => 'nullable|numeric|min:0', // Cambiado a numeric para decimal
             'id_categoria' => 'required|exists:categorias,id', // Validar que la categoría exista
         ]);
 

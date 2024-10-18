@@ -37,6 +37,13 @@
                             <x-input-error :messages="$errors->get('address')" class="mt-2" />
                         </div>
 
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <x-input-label for="email" :value="__('customer.email')" />
+                            <x-text-input id="email" class="form-control" type="text" name="email" required />
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
+
                         <!-- NIT -->
                         <div class="mb-3">
                             <x-input-label for="nit" :value="__('customer.nit')" />

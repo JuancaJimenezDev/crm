@@ -23,6 +23,7 @@
                                 <th>{{__('customer.name')}}</th>
                                 <th>{{__('customer.phone')}}</th>
                                 <th>{{__('customer.address')}}</th>
+                                <th>{{__('customer.email')}}</th>
                                 <th>{{__('customer.nit')}}</th>
                                 <th>Acciones</th>
                             </tr>
@@ -33,6 +34,7 @@
                                     <td>{{ $cliente->first_name }} {{ $cliente->last_name }}</td>
                                     <td>{{ $cliente->phone_number }}</td>
                                     <td>{{ $cliente->address }}</td>
+                                    <td>{{ $cliente->email }}</td>
                                     <td>{{ $cliente->nit }}</td>
                                     <td>
                                         <a title="{{__('customer.show')}}" href="{{ route('clientes.show', $cliente->id) }}" class="btn btn-link text-success">

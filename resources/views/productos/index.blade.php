@@ -14,44 +14,46 @@
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
                     <div class="table-responsive">
-                    <table id="products-table" class="table table-striped table-bordered mt-4">
-                        <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Stock</th>
-                            <th>Fecha de Vencimiento</th>
-                            <th>Categoria</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($productos as $producto)
+                        <table id="products-table" class="table table-striped table-bordered mt-4">
+                            <thead>
                             <tr>
-                                <td>{{ $producto->nombre }}</td>
-                                <td>{{ $producto->stock }}</td>
-                                <td>{{ $producto->fecha_vencimiento }}</td>
-                                <td>{{ $producto->categoria ? $producto->categoria->nombre : 'N/A' }}</td>
-                                <td>
-                                    <a title="Ver" href="{{ route('productos.show', $producto->id) }}" class="btn btn-link text-success">
-                                        <i class="fas fa-eye"></i>
-                                    </a>
-                                    <a title="Editar" href="{{ route('productos.edit', $producto->id) }}" class="btn btn-link text-success">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </a>
-                                    <form action="{{ route('productos.destroy', $producto->id) }}" method="POST" class="d-inline-block">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-link text-danger" title="Eliminar">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
-                                </td>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>En Promoción</th>
+                                <th>Precio Promocional</th>
+                                <th>Categoría</th>
+                                <th>Acciones</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            @foreach ($productos as $producto)
+                                <tr>
+                                    <td>{{ $producto->nombre }}</td>
+                                    <td>{{ number_format($producto->precio, 2) }}</td>
+                                    <td>{{ $producto->en_promocion ? 'Sí' : 'No' }}</td>
+                                    <td>{{ $producto->precio_promocional ? number_format($producto->precio_promocional, 2) : 'N/A' }}</td>
+                                    <td>{{ $producto->categoria ? $producto->categoria->nombre : 'N/A' }}</td>
+                                    <td>
+                                        <a title="Ver" href="{{ route('productos.show', $producto->id) }}" class="btn btn-link text-success">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a title="Editar" href="{{ route('productos.edit', $producto->id) }}" class="btn btn-link text-success">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <form action="{{ route('productos.destroy', $producto->id) }}" method="POST" class="d-inline-block">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-link text-danger" title="Eliminar">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

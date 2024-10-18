@@ -16,6 +16,13 @@ class Cliente extends Model
         'last_name',
         'phone_number',
         'address',
+        'email',
         'nit',
     ];
+
+    public function promocion()
+    {
+        return $this->hasMany(Promocion::class);
+    }
+
 }

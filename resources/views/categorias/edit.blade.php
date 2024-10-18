@@ -6,25 +6,27 @@
                     <h2 class="text-center text-light">Editar Producto</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('productos.update', $producto->id) }}">
+                    <form method="POST" action="{{ route('categorias.update', $categoria->id) }}">
                         @csrf
                         @method('PUT')
 
                         <!-- Nombre -->
                         <div class="mb-3">
                             <x-input-label for="nombre" :value="__('Nombre')" />
-                            <x-text-input id="nombre" class="form-control" type="text" name="nombre" value="{{ $producto->nombre }}" required autofocus />
+                            <x-text-input id="nombre" class="form-control" type="text" name="nombre" value="{{ $categoria->nombre }}" required autofocus />
                             <x-input-error :messages="$errors->get('nombre')" class="mt-2" />
                         </div>
-
-                        <!-- Stock -->
-                        <div class="mb-3">
-                            <x-input-label for="stock" :value="__('Stock')" />
-                            <x-text-input id="stock" class="form-control" type="number" name="stock" value="{{ $producto->stock }}" required />
-                            <x-input-error :messages="$errors->get('stock')" class="mt-2" />
+                        <div class="d-flex justify-content-end mt-4">
+                            <x-a-ref linkRef="{{ route('categorias.index') }}">
+                                {{ __('Regresar') }}
+                            </x-a-ref>
+                            <x-primary-button>
+                                {{ __('Guardar') }}
+                            </x-primary-button>
                         </div>
-
-                        <!-- Fecha de Vencimiento -->
-                        <div class="mb-3">
-                            <x-input-label for="fecha_vencimiento" :value="__('Fecha de Vencimiento')" />
-                            <x-text
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>

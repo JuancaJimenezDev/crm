@@ -17,18 +17,28 @@
                             <x-input-error :messages="$errors->get('nombre')" class="mt-2" />
                         </div>
 
-                        <!-- Stock -->
+                        <!-- Precio -->
                         <div class="mb-3">
-                            <x-input-label for="stock" :value="__('Stock')" />
-                            <x-text-input id="stock" class="form-control" type="number" name="stock" value="{{ $producto->stock }}" required />
-                            <x-input-error :messages="$errors->get('stock')" class="mt-2" />
+                            <x-input-label for="precio" :value="__('Precio')" />
+                            <x-text-input id="precio" class="form-control" type="number" step="0.01" name="precio" value="{{ $producto->precio }}" required />
+                            <x-input-error :messages="$errors->get('precio')" class="mt-2" />
                         </div>
 
-                        <!-- Fecha de Vencimiento -->
+                        <!-- En Promoción -->
                         <div class="mb-3">
-                            <x-input-label for="fecha_vencimiento" :value="__('Fecha de Vencimiento')" />
-                            <x-text-input id="fecha_vencimiento" class="form-control" type="date" name="fecha_vencimiento" value="{{ $producto->fecha_vencimiento }}" required />
-                            <x-input-error :messages="$errors->get('fecha_vencimiento')" class="mt-2" />
+                            <x-input-label for="en_promocion" :value="__('En Promoción')" />
+                            <select id="en_promocion" name="en_promocion" class="form-select" required>
+                                <option value="0" {{ $producto->en_promocion ? '' : 'selected' }}>No</option>
+                                <option value="1" {{ $producto->en_promocion ? 'selected' : '' }}>Sí</option>
+                            </select>
+                            <x-input-error :messages="$errors->get('en_promocion')" class="mt-2" />
+                        </div>
+
+                        <!-- Precio Promocional -->
+                        <div class="mb-3">
+                            <x-input-label for="precio_promocional" :value="__('Precio Promocional')" />
+                            <x-text-input id="precio_promocional" class="form-control" type="number" step="0.01" name="precio_promocional" value="{{ $producto->precio_promocional }}" />
+                            <x-input-error :messages="$errors->get('precio_promocional')" class="mt-2" />
                         </div>
 
                         <!-- Categoría -->

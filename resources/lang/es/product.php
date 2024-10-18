@@ -1,0 +1,27 @@
+<?php
+return [
+"products" => "Productos",
+    "add_product" => "Agregar producto",
+    "edit_product" => "Editar producto",
+    "delete_product" => "Eliminar producto",
+    "prodcut_added" => "Producto agregado",
+    "prodcut_updated" => "Producto actualizado",
+    "prodcut_deleted" => "Producto eliminado",
+    "details_product" => "Detalles del producto",
+    "product" => "Producto",
+    "name" => "Nombre",
+    "price" => "Precio",
+    "in_promotion" => utf8_encode("En promoción"),
+    "price_promotion" => "Precio promocional",
+    "discount" => "Descuento",
+    "category" => utf8_encode("Categoría"),
+    "select_category" => utf8_encode("Seleccionar categoría"),
+    "actions" => "Acciones",
+    "edit" => "Editar",
+    "delete" => "Eliminar",
+    "save" => "Guardar",
+    "back" => "Volver",
+    "create" => "Crear",
+    "update" => "Actualizar",
+
+];

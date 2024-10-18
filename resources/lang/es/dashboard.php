@@ -7,4 +7,5 @@ return [
     'profile' => 'Perfil',
     'categories' => 'Categorias',
     'products' => 'Productos',
+    'promotions' => 'Promociones',
 ];

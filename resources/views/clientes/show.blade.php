@@ -19,6 +19,9 @@
                         <strong>{{ __('customer.address') }}: </strong> {{ $cliente->address }}
                     </div>
                     <div class="list-group-item">
+                        <strong>{{ __('customer.address') }}: </strong> {{ $cliente->email }}
+                    </div>
+                    <div class="list-group-item">
                         <strong>{{ __('customer.nit') }}: </strong> {{ $cliente->nit }}
                     </div>
 

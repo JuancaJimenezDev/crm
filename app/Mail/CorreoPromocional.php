@@ -2,25 +2,25 @@
 
 namespace App\Mail;
 
-use App\Models\Producto;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Database\Eloquent\Collection;
 
 class CorreoPromocional extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $producto;
+    public $productos;
 
-    public function __construct(Producto $producto)
+    public function __construct(Collection $productos)
     {
-        $this->producto = $producto;
+        $this->productos = $productos;
     }
 
-    public function build(): CorreoPromocional
+    public function build()
     {
-        return $this->subject('Promoción en tu producto favorito')
-            ->view('emails.promocion');
+        return $this->subject('Promociones en tus productos favoritos')
+            ->view('emails.promocion', ['productos' => $this->productos]);
     }
 }

@@ -25,6 +25,7 @@ class ClienteController extends Controller
             'last_name' => 'required',
             'phone_number' => 'required',
             'address' => 'required',
+            'email' => 'required',
             'nit' => 'required',
         ]);
 
@@ -51,6 +52,7 @@ class ClienteController extends Controller
             'last_name' => 'required',
             'phone_number' => 'required',
             'address' => 'required',
+            'email' => 'required',
             'nit' => 'required',
         ]);
 

@@ -20,21 +20,18 @@ class PromocionController extends Controller
 
     public function enviarPromociones(Request $request)
     {
-        $productos = $request->input('productos');
-        $clientes = $request->input('clientes');
+        $productos = Producto::whereIn('id', $request->input('productos'))->get();
+        $clientes = Cliente::whereIn('id', $request->input('clientes'))->get();
 
-        foreach ($clientes as $clienteId) {
-            foreach ($productos as $productoId) {
-                // Lógica para enviar el correo
-                $cliente = Cliente::find($clienteId);
-                $producto = Producto::find($productoId);
+        foreach ($clientes as $cliente) {
+            // Enviar todos los productos como array al correo del cliente
+            Mail::to($cliente->email)->send(new CorreoPromocional($productos));
 
-                Mail::to($cliente->email)->send(new CorreoPromocional($producto));
-
-                // Guardar en la tabla de promociones
+            // Guardar en la tabla de promociones para cada producto y cliente
+            foreach ($productos as $producto) {
                 Promocion::create([
-                    'producto_id' => $productoId,
-                    'cliente_id' => $clienteId,
+                    'producto_id' => $producto->id,
+                    'cliente_id' => $cliente->id,
                 ]);
             }
         }
