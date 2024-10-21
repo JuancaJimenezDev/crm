@@ -30,9 +30,9 @@
                         <x-a-ref linkRef="{{ route('clientes.index') }}">
                             {{ __('customer.back') }}
                         </x-a-ref>
-                        <x-primary-button>
-                            {{__('customer.edit')}}
-                        </x-primary-button>
+
+                        <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-primary">{{__('customer.edit')}}</a>
+
                     </div>
                     </div>
 

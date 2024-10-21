@@ -24,8 +24,11 @@
 
                     <div class="list-group-item">
                         <div class="d-flex justify-content-end mt-5 mb-4">
-                            <a href="{{ route('productos.index') }}" class="btn btn-secondary me-2">Regresar</a>
-                            <a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">Editar</a>
+
+                            <x-a-ref linkRef="{{ route('productos.index') }}">
+                                {{ __('product.back') }}
+                            </x-a-ref>
+                            <a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-primary">{{__('product.edit')}}</a>
                         </div>
                     </div>
                 </div>

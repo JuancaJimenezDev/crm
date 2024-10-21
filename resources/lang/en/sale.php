@@ -1,0 +1,31 @@
+<?php
+
+return [
+    // Ventas
+    "sales_list" => "Sales",
+    "new_sale" => "New Sale",
+    "create_sale" => "Create Sale",
+    "edit_sale" => "Edit Sale",
+    "sale_details" => "Sale Details",
+    "client_name" => "Client Name",
+    "seller_name" => "Seller Name",
+    "sale_date" => "Sale Date",
+    "subtotal" => "Subtotal",
+    "grand_total" => "Total",
+    "add_product" => "Add Product",
+    "product_name" => "Product Name",
+    "quantity" => "Quantity",
+    "unit_price" => "Unit Price",
+    "promotion" => "Promotion",
+    "products_sold" => "Products Sold",
+    "actions" => "Actions",
+    "payment_method" => "Payment Method",
+    "back" => "Back",
+    "save" => "Save",
+    "edit" => "Edit",
+    "delete" => "Delete",
+    "delete_sale" => "Delete Sale",
+    "delete_product" => "Delete Product",
+    "current_stock" => "Current Stock",
+    "stock_remaining" => "Stock Remaining",
+];

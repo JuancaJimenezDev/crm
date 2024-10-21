@@ -5,7 +5,9 @@ return [
     'logged_in' => '¡Has iniciado sesión!',
     'customer' => 'Clientes',
     'profile' => 'Perfil',
-    'categories' => 'Categorias',
+    'categories' => 'Categorías',
     'products' => 'Productos',
     'promotions' => 'Promociones',
+    'type_payments' => 'Tipos de pagos',
+    'sales' => 'Ventas',
 ];

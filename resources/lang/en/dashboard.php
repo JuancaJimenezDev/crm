@@ -8,5 +8,7 @@ return [
     'categories' => 'Categories',
     'products' => 'Products',
     'promotions' => 'Promotions',
+    'type_payments' => 'Type of Payments',
+    'sales' => 'Sales',
 ];
 

@@ -32,6 +32,15 @@
                         {{ __('dashboard.promotions') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('pagos.index')" :active="request()->routeIs('pagos.index') || request()->routeIs('pagos.create') || request()->routeIs('pagos.edit')">
+                        {{ __('dashboard.type_payments') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('ventas.index')" :active="request()->routeIs('ventas.index') || request()->routeIs('ventas.create') || request()->routeIs('ventas.edit') || request()->routeIs('ventas.show')">
+                        {{ __('dashboard.sales') }}
+                    </x-nav-link>
+
+
                 </div>
             </div>
 
@@ -103,6 +112,14 @@
 
             <x-nav-link :href="route('promociones.index')" :active="request()->routeIs('promociones.index')">
                 {{ __('dashboard.promotions') }}
+            </x-nav-link>
+
+            <x-nav-link :href="route('pagos.index')" :active="request()->routeIs('pagos.index') || request()->routeIs('pagos.create') || request()->routeIs('pagos.edit')">
+                {{ __('dashboard.type_payments') }}
+            </x-nav-link>
+
+            <x-nav-link :href="route('ventas.index')" :active="request()->routeIs('ventas.index') || request()->routeIs('ventas.create') || request()->routeIs('ventas.edit') || request()->routeIs('ventas.show')">
+                {{ __('dashboard.sales') }}
             </x-nav-link>
 
 

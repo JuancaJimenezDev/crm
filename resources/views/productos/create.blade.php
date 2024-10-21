@@ -25,7 +25,7 @@
 
                         <!-- En Promoción -->
                         <div class="mb-3">
-                            <x-input-label for="en_promocion" :value="__('producto.in_promotion')" />
+                            <x-input-label for="en_promocion" :value="__('product.in_promotion')" />
                             <select id="en_promocion" name="en_promocion" class="form-select" required>
                                 <option value="0">No</option>
                                 <option value="1">Sí</option>
@@ -35,7 +35,7 @@
 
                         <!-- Precio Promocional -->
                         <div class="mb-3">
-                            <x-input-label for="precio_promocional" :value="__('producto.price_promotion')" />
+                            <x-input-label for="precio_promocional" :value="__('product.price_promotion')" />
                             <x-text-input id="precio_promocional" class="form-control" type="number" step="0.01" name="precio_promocional" />
                             <x-input-error :messages="$errors->get('precio_promocional')" class="mt-2" />
                         </div>

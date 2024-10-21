@@ -1,3 +1,26 @@
 <?php
 
-return [];
+return [
+    "name" => "Nombre",
+    "description" => "Descripcion",
+    "add" => "Agregar",
+    "edit" => "Editar",
+    "delete" => "Eliminar",
+    "create" => "Crear",
+    "update" => "Actualizar",
+    "show" => "Mostrar",
+    "add_category" => "Agregar Categoría",
+    "edit_category" => "Editar Categoría",
+    "delete_category" => "Eliminar Categoría",
+    "create_category" => "Crear Categoría",
+    "update_category" => "Actualizar Categoría",
+    "show_category" => "Mostrar Categoría",
+    "details_category" => "Detalles Categoría",
+    "save" => "Guardar",
+    "back" => "Volver",
+    "category" => "Categoría",
+    "categories" => "Categorías",
+    "category_list" => "Lista de Categorías",
+    "new_category" => "Nueva Categoría",
+    "actions" => "Acciones",
+];

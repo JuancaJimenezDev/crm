@@ -1,0 +1,31 @@
+<?php
+
+return [
+    // Ventas
+    "sales_list" => "Ventas",
+    "new_sale" => "Nueva Venta",
+    "create_sale" => "Crear Venta",
+    "edit_sale" => "Editar Venta",
+    "sale_details" => "Detalles de la Venta",
+    "client_name" => "Nombre del Cliente",
+    "seller_name" => "Nombre del Vendedor",
+    "sale_date" => "Fecha de Venta",
+    "subtotal" => "Subtotal",
+    "grand_total" => "Total",
+    "add_product" => "Agregar Producto",
+    "product_name" => "Nombre del Producto",
+    "quantity" => "Cantidad",
+    "unit_price" => "Precio Unitario",
+    "promotion" => "Promoción",
+    "products_sold" => "Productos Vendidos",
+    "actions" => "Acciones",
+    "payment_method" => "Método de pago",
+    "back" => "Volver",
+    "save" => "Guardar",
+    "edit" => "Editar",
+    "delete" => "Eliminar",
+    "delete_sale" => "Eliminar Venta",
+    "delete_product" => "Eliminar Producto",
+    "current_stock" => "Stock Actual",
+    "stock_remaining" => "Stock Restante",
+];

@@ -56,10 +56,10 @@
 
                         <div class="d-flex justify-content-end mt-4">
                             <x-a-ref linkRef="{{ route('productos.index') }}">
-                                {{ __('Regresar') }}
+                                {{ __('product.back') }}
                             </x-a-ref>
                             <x-primary-button>
-                                {{ __('Guardar') }}
+                                {{ __('product.save') }}
                             </x-primary-button>
                         </div>
                     </form>
