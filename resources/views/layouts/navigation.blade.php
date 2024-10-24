@@ -40,6 +40,10 @@
                         {{ __('dashboard.sales') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('sales-reports.index')" :active="request()->routeIs('sales-reports.index')">
+                        {{ __('dashboard.sales_report') }}
+                    </x-nav-link>
+
 
                 </div>
             </div>
@@ -120,6 +124,10 @@
 
             <x-nav-link :href="route('ventas.index')" :active="request()->routeIs('ventas.index') || request()->routeIs('ventas.create') || request()->routeIs('ventas.edit') || request()->routeIs('ventas.show')">
                 {{ __('dashboard.sales') }}
+            </x-nav-link>
+
+            <x-nav-link :href="route('sales-reports.index')" :active="request()->routeIs('sales-reports.index')">
+                {{ __('dashboard.sales_report') }}
             </x-nav-link>
 
 

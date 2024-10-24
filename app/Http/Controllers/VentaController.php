@@ -127,24 +127,6 @@ class VentaController extends Controller
         return view('ventas.show', compact('venta'));
     }
 
-    private function obtenerVentasFiltradas(Request $request)
-    {
-        $query = Venta::query()->with('detalles.producto', 'cliente', 'user');
-
-        if ($request->filled('start_date') && $request->filled('end_date')) {
-            $query->whereBetween('fecha_venta', [$request->start_date, $request->end_date]);
-        }
-
-        if ($request->filled('user_id')) {
-            $query->where('user_id', $request->user_id);
-        }
-
-        if ($request->filled('cliente_id')) {
-            $query->where('cliente_id', $request->cliente_id);
-        }
-
-        return $query->limit(30)->get();
-    }
 
     public function destroy(Venta $venta)
     {

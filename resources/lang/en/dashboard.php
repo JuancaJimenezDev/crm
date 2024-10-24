@@ -10,5 +10,6 @@ return [
     'promotions' => 'Promotions',
     'type_payments' => 'Type of Payments',
     'sales' => 'Sales',
+    'sales_report' => 'Sales Report',
 ];
 

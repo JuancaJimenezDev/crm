@@ -10,4 +10,5 @@ return [
     'promotions' => 'Promociones',
     'type_payments' => 'Tipos de pagos',
     'sales' => 'Ventas',
+    'sales_report' => 'Reporte de ventas',
 ];
