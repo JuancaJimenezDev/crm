@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('storage/logo.png') }}" alt="Logo" width="80" height="50"/>
+                        <img src="{{ asset('https://upload.wikimedia.org/wikipedia/commons/a/a2/OPPO_LOGO_2019.png') }}" alt="Logo" width="80" height="50"/>
                     </a>
                 </div>
 
@@ -38,6 +38,10 @@
 
                     <x-nav-link :href="route('ventas.index')" :active="request()->routeIs('ventas.index') || request()->routeIs('ventas.create') || request()->routeIs('ventas.edit') || request()->routeIs('ventas.show')">
                         {{ __('dashboard.sales') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('inventario.index')" :active="request()->routeIs('inventario.index')">
+                        {{ __('dashboard.inventory') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('sales-reports.index')" :active="request()->routeIs('sales-reports.index')">

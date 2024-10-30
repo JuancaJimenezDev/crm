@@ -11,4 +11,6 @@ return [
     'type_payments' => 'Tipos de pagos',
     'sales' => 'Ventas',
     'sales_report' => 'Reporte de ventas',
+    'inventory' => 'Inventario',
+
 ];

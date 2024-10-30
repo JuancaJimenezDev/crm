@@ -11,5 +11,7 @@ return [
     'type_payments' => 'Type of Payments',
     'sales' => 'Sales',
     'sales_report' => 'Sales Report',
+    'inventory' => 'Inventory',
+
 ];
 
